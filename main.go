@@ -9,7 +9,7 @@ import (
 func timeHandler(w http.ResponseWriter, r *http.Request) {
 	location, _ := time.LoadLocation("America/Vancouver")
 	currentTime := time.Now().In(location).Format("Monday, January 2, 2006 at 3:04:05 PM MST")
-	fmt.Fprintf(w, "Server Local Time: %s\n", currentTime)
+	fmt.Fprintf(w, "Server Time: %s\n", currentTime)
 }
 
 func main() {
